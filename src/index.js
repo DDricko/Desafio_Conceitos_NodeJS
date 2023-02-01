@@ -44,7 +44,7 @@ app.post('/users', (request, response) => {
 });
 
 app.get('/todos', checksExistsUserAccount, (request, response) => {
-  const { user } = request.body;
+  const { user } = request;
 
   return response.json(user.todos);
 });
